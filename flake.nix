@@ -13,9 +13,9 @@
           gojasm = pkgs.callPackage ./gojasm.nix { };
           default = gojasm;
         };
-        overlay = self: super: {
+        overlay = (self: super: {
           gojasm = super.callPackage ./gojasm.nix { };
-        };
+        });
       }
     );
 }
