@@ -1,12 +1,11 @@
-{ buildGoModule
-, fetchFromGitHub
+{ pkgs
 }:
 
-buildGoModule {
+pkgs.buildGoModule {
   pname = "gojasm";
   version = "1.5.0";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "BlackNovaTech";
     repo = "goJASM";
     rev = "890c51c0e147d7dfc821712162bdbc7b2093038e";
